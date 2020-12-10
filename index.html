@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RL trader</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body id="Home">
+    <!--FontAwesome-->
+    <script
+      src="https://kit.fontawesome.com/979be9975a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--import-->
+    <script src="src/js-render.js"></script>
+    <script src="src/js-index.js"></script>
+
+    <div id="App">
+      <!--App-->
+      <!----------------------------------------------------------->
+      <!--FormPage-->
+
+      <div id="FORM">
+        <div id="formcontainer">
+          <h1 id="title">Login</h1>
+          <h2 id="subtitle">Rocket League Trader</h2>
+
+          <div id="UsernameInput" class="form__group field">
+            <input
+              type="text"
+              class="form__field"
+              placeholder="username"
+              id="username"
+              onkeyup="forceLower(this);"
+            />
+            <label class="form__label">Username</label>
+          </div>
+
+          <div id="EmailInput" class="form__group field">
+            <input
+              type="email"
+              class="form__field"
+              placeholder="email"
+              id="email"
+              onkeyup="forceLower(this)"
+            />
+            <label class="form__label">Email Adress</label>
+          </div>
+
+          <div id="PasswordInput" class="form__group field">
+            <input
+              type="password"
+              class="form__field"
+              placeholder="password"
+              id="password"
+            />
+            <label class="form__label">Password</label>
+          </div>
+
+          <div id="btncontainer">
+            <button class="formbutton" onclick="signUp();" id="signUpbtn">
+              Sign Up
+            </button>
+            <button class="formbutton" onclick="signIn();" id="signInbtn">
+              Sign In
+            </button>
+            <button class="formbutton" onclick="signOut();" id="signOutbtn">
+              Sign Out
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="MENU">
+        <div id="menuNav" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">
+            ×
+          </a>
+          <a href="#">something</a>
+          <a href="#">something</a>
+          <a href="#">something</a>
+          <a href="#">something</a>
+        </div>
+
+        <div id="topmenu" class="UI">
+          <button id="menubtn" class="icon GUI" onclick="openNav();">
+            <span id="i-menu">☰</span>
+          </button>
+
+          <div id="userbox" class="SETTING">
+            <div id="namedisplay">
+              usernameeeeeeeeee
+            </div>
+
+            <div id="rankdisplay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------->
+    </div>
+    <!--App-->
+  </body>
+</html>

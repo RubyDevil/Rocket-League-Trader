@@ -1,0 +1,144 @@
+#title {
+  border: 0px solid red;
+  font-size: 5em;
+  font-weight: 900;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  background: -webkit-linear-gradient(left, purple 20%, magenta, pink 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#subtitle {
+  border: 0px solid white;
+  font-size: 2.5em;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  background: -webkit-linear-gradient(left, purple 20%, magenta, pink 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.formbutton {
+  position: relative;
+  width: 6.1em;
+  height: 2.2em;
+  font-size: 1.2em;
+  font-weight: 1000;
+  background: #0000;
+  border: 0;
+  outline: 0;
+  border-image: #0000 1;
+  border-width: 0.1em;
+  border-radius: 35px;
+  background: linear-gradient(to left, purple, magenta, pink 90%);
+  background-clip: border-box;
+  text-shadow: 0 0 0;
+}
+
+.formbutton:active {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#formcontainer {
+  border: 0px solid white;
+  font-size: 1em;
+}
+
+#btncontainer {
+  border: 0px solid green;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 3, repeat(33.333%);
+}
+
+#signUpbtn {
+  justify-self: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#signOutbtn {
+  justify-self: center;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#signInbtn {
+  justify-self: center;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3em;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.5em;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1em;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, purple, magenta, pink 90%) 1;
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1em;
+  color: magenta;
+}
+
+#username {
+  text-transform: lowercase;
+  font-weight: 800;
+}
+#email {
+  text-transform: lowercase;
+  font-weight: 800;
+}
+#password {
+  font-weight: 800;
+}
