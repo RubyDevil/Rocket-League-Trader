@@ -2,9 +2,9 @@
   "name": "rocket-league-trader",
   "version": "1.0.0",
   "description": "build please",
-  "main": "rltrader",
+  "main": "index.html",
   "scripts": {
-    "build": "parcel build --index.html"
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "@firebase/app": "0.6.13",
