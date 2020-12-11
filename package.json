@@ -1,5 +1,5 @@
 {
-  "name": "rl-trader",
+  "name": "rocket-league-trader",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -14,11 +14,12 @@
     "font-awesome": "4.7.0",
     "jquery": "3.5.1",
     "moment": "2.29.1",
-    "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
+    "next": "10.0.3",
     "@babel/core": "7.12.9"
-  }
+  },
+  "keywords": []
 }
