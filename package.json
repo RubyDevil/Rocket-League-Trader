@@ -2,7 +2,7 @@
   "name": "rocket-league-trader",
   "version": "1.0.0",
   "description": "build please",
-  "main": "public",
+  "main": "rltrader",
   "scripts": {
     "build": "parcel build rltrader"
   },
@@ -27,7 +27,7 @@
     "bin": "",
     "man": "",
     "doc": "",
-    "rltrader": "public/index.html/"
+    "rltrader": "./index.html/"
   },
   "keywords": [
     "build",
