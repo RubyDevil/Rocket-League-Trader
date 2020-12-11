@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "parcel build --output public"
+    "build": "parcel build --public"
   },
   "dependencies": {
+    "@babel/runtime-corejs3": "7.12.5",
+    "@firebase/app-types": "0.6.1",
     "@firebase/firestore": "2.0.5",
     "animejs": "3.2.1",
     "firebase": "8.1.2",
