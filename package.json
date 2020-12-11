@@ -1,10 +1,10 @@
 {
   "name": "rocket-league-trader",
   "version": "1.0.0",
-  "description": "",
+  "description": "build please",
   "main": "public",
   "scripts": {
-    "build": "parcel build index.html"
+    "build": "parcel build rltrader"
   },
   "dependencies": {
     "@firebase/app": "0.6.13",
@@ -23,5 +23,17 @@
     "typescript": "3.8.3",
     "@babel/core": "7.12.9"
   },
-  "keywords": []
+  "directories": {
+    "lib": "",
+    "bin": "",
+    "man": "",
+    "doc": "",
+    "rltrader": "public/index.html/"
+  },
+  "keywords": ["build","please"],
+  "author": {
+    "name": "Ruby.js",
+    "email": "TeamRivalityOfficial@gmail.com",
+    "url": "https://dx54u.csb.app/"
+  }
 }
