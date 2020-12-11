@@ -9,7 +9,7 @@
   "dependencies": {
     "@firebase/app": "0.6.13",
     "@firebase/firestore": "2.0.5",
-    "animejs": "3.2.1",
+    "core-js": "3.8.1",
     "firebase": "8.1.2",
     "font-awesome": "4.7.0",
     "jquery": "3.5.1",
