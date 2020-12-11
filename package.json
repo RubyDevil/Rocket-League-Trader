@@ -39,5 +39,9 @@
     "name": "Ruby.js",
     "email": "TeamRivalityOfficial@gmail.com",
     "url": "https://dx54u.csb.app/"
+  },
+  "repository": { 
+    "type": "git", 
+    "url": "https://github.com/RubyDevil/rocket-league-trader"
   }
 }
