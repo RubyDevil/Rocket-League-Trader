@@ -4,6 +4,7 @@
   "description": "build please",
   "main": "index.html",
   "scripts": {
+    "start": "parcel start src/css-form.css",
     "build": "parcel build index.html"
   },
   "dependencies": {
