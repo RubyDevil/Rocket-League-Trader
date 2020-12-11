@@ -1,6 +1,6 @@
 import style from "./css-form.css";
 import { db, snapshot } from "./js-firebase";
-import { FieldPath } from "firebase";
+import { FieldPath } from "@firebase/firestore";
 // My Data (html)
 export var Home = document.getElementById("Home");
 export var FORM = document.getElementById("FORM");
@@ -27,9 +27,6 @@ export var password = document.getElementById("password");
 export var username = document.getElementById("username");
 export var UserID = Math.floor(Math.random() * 1000000) + 100000;
 
-export var SignUpStatus = "success";
-//export var authSignUpStatus = "success"
 
+//export let accountsRef = db.collection("accounts");
 export let accountsRef = db.collection("accounts");
-
-//export { snapshot } from "firebase"

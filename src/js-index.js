@@ -19,9 +19,7 @@ import { exists } from "firebase";
 //Local Data
 let connection = "success";
 //------------------------------------------------------------------------------------------
-window.onbeforeunload = () => {
-  firebase.auth().signOut();
-};
+
 //------------------------------------------------------------------------------------------
 //  SingUp
 window.signUp = function signUp() {
@@ -31,12 +29,8 @@ window.signUp = function signUp() {
     SignUpStatus = "fail";
     alert("Required informations missing");
   } else if (SignUpStatus == "success") {
-    //  make lowercase (to do)
     //  check if username exists
-    accountsRef
-      .where("username", "==", username.value)
-      .get()
-      .then(function (snapshot) {
+    accountsRef.where("username", "==", username.value).get().then(function (snapshot) {
         snapshot.forEach(function (data) {
           //forEach does not matter => only 1 at a time should exist
           SignUpStatus = "fail";
@@ -45,11 +39,8 @@ window.signUp = function signUp() {
       });
   } else if (SignUpStatus == "success") {
     //  check if email exists
-    accountsRef
-      .where("email", "==", email.value)
-      .get()
-      .then(function (snapshot) {
-        snapshot.forEach(function (data) {
+    accountsRef.where("email", "==", email.value).get().then(function (snapshot) {
+        snapshot.forEach(function() {
           //forEach does not matter => only 1 at a time should exist
           SignUpStatus = "fail";
           alert("Email Adress is already assigned to an account");
@@ -63,21 +54,18 @@ window.signUp = function signUp() {
 };
 //  Auth SignUp
 function authSignUp() {
-  var authSignUpStatus = "success"; //  by default
+  //var authSignUpStatus = "success"; //  by default
   const promise = auth.createUserWithEmailAndPassword(
     email.value,
     password.value
   );
-  promise.catch((e) => {
-    authSignUpStatus = "fail";
-    alert(e.message);
-  });
+  promise.catch((e) => alert(e.message));
 
   //alert("Signed Up")
   /*
     setUserData();//  call userdata function
     */
-}
+};
 // Define user account informations
 /*function setUserData() {
     .once('value').then(function(snapshot) {
@@ -122,8 +110,8 @@ function authSignUp() {
 //  SingOut
 window.signOut = function signOut() {
   auth.signOut();
-  FORM.style.display = "block";
-  MENU.style.display = "none";
+  //FORM.style.display = "block";
+  //MENU.style.display = "none";
   alert("Signed Out");
 };
 //------------------------------------------------------------------------------------------
