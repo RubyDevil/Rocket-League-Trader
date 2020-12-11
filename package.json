@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build --output public"
   },
   "dependencies": {
     "@firebase/firestore": "2.0.5",
