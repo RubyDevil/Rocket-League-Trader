@@ -29,7 +29,8 @@
     "bin": "",
     "man": "",
     "doc": "",
-    "rltrader": "./index.html/"
+    "rltrader": "./index.html/",
+    "Output": "directory"
   },
   "keywords": [
     "build",
