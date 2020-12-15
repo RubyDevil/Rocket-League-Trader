@@ -21,9 +21,8 @@ import {
 import "./css-form.css";
 //------------------------------------------------------------------------------------------
 renderform();
-function renderform() {
-  //FORM.style.display = "none";
-  //MENU.style.display = "flex";
+function renderform() {//FORM.style.display = "none";
+//MENU.style.display = "flex";
   if (deviceH > deviceW) {
     formcontainer.style.fontSize = `${Wratio * 2.8}em`;
 

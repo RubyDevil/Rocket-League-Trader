@@ -7,6 +7,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@firebase/auth": "0.16.0",
     "@firebase/firestore": "2.0.5",
     "firebase": "8.1.2",
     "font-awesome": "4.7.0",
