@@ -1,5 +1,5 @@
 {
-  "name": "rocket-league-trader",
+  "name": "rocket-league-trader-v-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -18,5 +18,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.9"
-  }
+  },
+  "keywords": []
 }
