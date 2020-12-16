@@ -3,20 +3,17 @@ import {
   FORM,
   MENU,
   formcontainer,
-  //Ftitle,
-  //Fsubtitle,
-  //btncontainer,
-  //signUpbtn,
-  //signInbtn,
-  //signOutbtn,
-  //App,
   deviceW,
   deviceH,
   //BaseW,
   //BaswH,
   Wratio,
-  username
-  //Hratio,
+  username,
+  Ulabel,
+  Elabel,
+  Plabel,
+  email,
+  password
 } from "./js-data";
 import "./css-form.css";
 //------------------------------------------------------------------------------------------
@@ -36,7 +33,6 @@ function renderform() {//FORM.style.display = "none";
   console.log(`${deviceW} || ${deviceH}`);
 }
 //------------------------------------------------------------------------------------------
-
 window.openNav = function openNav() {
   document.getElementById("menuNav").style.width = "14em";
 };
@@ -44,9 +40,19 @@ window.openNav = function openNav() {
 window.closeNav = function closeNav() {
   document.getElementById("menuNav").style.width = "0";
 };
-
 //------------------------------------------------------------------------------------------
-
+username.addEventListener("focus", () => {
+  username.classList.remove("error");
+  Ulabel.classList.remove("error");
+})
+email.addEventListener("focus", () => {
+  email.classList.remove("error");
+  Elabel.classList.remove("error");
+})
+password.addEventListener("focus", () => {
+  password.classList.remove("error");
+  Plabel.classList.remove("error");
+})
 //------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------

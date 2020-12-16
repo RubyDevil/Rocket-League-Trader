@@ -22,6 +22,10 @@ export var BaseH = 722;
 export var Wratio = `${deviceW / BaseW}`;
 export var Hratio = `${deviceH / BaseH}`;
 
+export var Ulabel = document.getElementById("Ulabel");
+export var Elabel = document.getElementById("Elabel");
+export var Plabel = document.getElementById("Plabel");
+
 export var email = document.getElementById("email");
 export var password = document.getElementById("password");
 export var username = document.getElementById("username");

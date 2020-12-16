@@ -13,10 +13,6 @@ body {
   background: none;
 }
 
-#App {
-  font-size: 1em;
-}
-
 #FORM {
   font-family: "Poppins", sans-serif;
   display: flex; /*flex*/
@@ -26,7 +22,7 @@ body {
   min-height: 100vh;
   font-size: 1em;
   color: white;
-  background-image: url("/assets/background/maverickgxt.png");
+  background-image: url("/src/assets/background/maverickgxt.png");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;

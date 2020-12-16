@@ -7,7 +7,10 @@ import {
   username,
   email,
   password,
-  accountsRef
+  accountsRef,
+  Ulabel,
+  Elabel,
+  Plabel
 } from "./js-data";
 //------------------------------------------------------------------------------------------
 //Local Data
@@ -18,13 +21,13 @@ window.onbeforeunload = () => {
 }
 //------------------------------------------------------------------------------------------
 //  time function
-function sleep(milliseconds) {
+/*function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
   do {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
-}
+}*/
 //------------------------------------------------------------------------------------------
 //  SingUp
 window.signUp = function signUp() {
@@ -38,22 +41,22 @@ window.signUp = function signUp() {
       accountsRef.where("username","==",username.value).get().then(function(snapshot) {
         snapshot.forEach(function () {
           SignUpStatus = "fail";
-          alert("Username is already taken");
+          username.classList.add("error");
+          Ulabel.classList.add("error");
+          alert("Username is taken")
         })
-      })
-      sleep(500);
-      if(SignUpStatus == "success") {
         accountsRef.where("email","==",email.value).get().then(function(snapshot) {
           snapshot.forEach(function () {
             SignUpStatus = "fail";
-            alert("Email Adress is already assigned to an accounts");
+            email.classList.add("error");
+            Elabel.classList.add("error");
+            alert("Email adress is already in use")
           })
+          if(SignUpStatus == "success") {
+            alert("yay!");
+          }
         })
-        sleep(1000);
-        if(SignUpStatus == "success") {
-          alert("yay!")
-        }
-      }
+      })
     }
   }
 };
@@ -66,7 +69,8 @@ function authSignUp() {
   );
   promise.catch((e) => {
     authSignUpStatus = "fail"
-    alert(e.message)
+    email.classList.add("error");
+    Elabel.classList.add("error");
   })
   if(authSignUpStatus == "success") {
     //success => proceding to Database_SignUp

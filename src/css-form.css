@@ -88,11 +88,11 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 0.2em solid #9b9b9b;
   outline: 0;
   font-size: 1.3em;
   color: #fff;
-  padding: 7px 0;
+  padding: 0.5em 0;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -101,8 +101,9 @@
 }
 .form__field:placeholder-shown ~ .form__label {
   font-size: 1.5em;
+  font-weight: 700;
   cursor: text;
-  top: 20px;
+  top: 1em;
 }
 
 .form__label {
@@ -111,15 +112,15 @@
   display: block;
   transition: 0.2s;
   font-size: 1em;
+  font-weight: 700;
   color: #9b9b9b;
 }
 
 .form__field:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, purple, magenta, pink 90%) 1;
-  border-image-slice: 1;
+  padding-bottom: 0.5em;
+  font-weight: 800;
+  border-width: 0.3em;
+  border-color: magenta;
 }
 
 .form__field:focus ~ .form__label {
@@ -130,7 +131,7 @@
   font-size: 1em;
   color: magenta;
 }
-
+/*-------------------------------------------------------------------*/
 #username {
   text-transform: lowercase;
   font-weight: 800;
@@ -142,3 +143,19 @@
 #password {
   font-weight: 800;
 }
+.error {
+  border-bottom: 3px solid red;
+}
+#Ulabel.error {
+  color: red;
+  border: none;
+}
+#Elabel.error {
+  color: red;
+  border: none;
+}
+#Plabel.error {
+  color: red;
+  border: none;
+}
+/*-------------------------------------------------------------------*/
