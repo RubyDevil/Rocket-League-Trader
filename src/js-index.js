@@ -17,34 +17,46 @@ window.onbeforeunload = () => {
   auth.signOut();
 }
 //------------------------------------------------------------------------------------------
+//  time function
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+//------------------------------------------------------------------------------------------
 //  SingUp
 window.signUp = function signUp() {
-  var SignUpStatus = "success" //  by default
+  let SignUpStatus = "success" //  by default
   //  prevent No Information SignUp
-  if(username.value === "" || email.value === "" || password.value === "") {
+  if(username.value == "" || email.value == "" || password.value == "") {
     SignUpStatus = "fail"
     alert("Required information is missing");
   } else {
     if(SignUpStatus == "success") {
       accountsRef.where("username","==",username.value).get().then(function(snapshot) {
-        snapshot.forEach(function (data) {
-            SignUpStatus = "fail";
-            alert("Username is already taken");
-        });
-      });
-      accountsRef.where("email","==",email.value).get().then(function(snapshot) {
         snapshot.forEach(function () {
           SignUpStatus = "fail";
-          alert("Email Adress is already assigned to an account");
+          alert("Username is already taken");
         })
       })
-    }
-    if(SignUpStatus == "success") {
-      //success => proceding to Auth_SignUp
-      authSignUp();
+      sleep(500);
+      if(SignUpStatus == "success") {
+        accountsRef.where("email","==",email.value).get().then(function(snapshot) {
+          snapshot.forEach(function () {
+            SignUpStatus = "fail";
+            alert("Email Adress is already assigned to an accounts");
+          })
+        })
+        sleep(1000);
+        if(SignUpStatus == "success") {
+          alert("yay!")
+        }
+      }
     }
   }
-}
+};
 //  Auth SignUp
 function authSignUp() {
   let authSignUpStatus = "success"; //  by default
@@ -73,6 +85,7 @@ function databaseSignUp() {
     ref: `/accounts/${username.value}`
   });
   //success => proceding to Define_User_Data
+  //setUserData();
 }
 // Define user account informations
 function setUserData() {
