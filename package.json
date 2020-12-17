@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "parcel build index.html"
+    "build": "dojo build --mode dist"
   },
   "dependencies": {
+    "@dojo/cli-build-app": "7.0.4",
     "@firebase/auth": "0.16.0",
     "@firebase/firestore": "2.0.5",
     "firebase": "8.1.2",
